@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c154bae4768e3bc94db42d93f5572647 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c154bae4768e3bc94db42d93f5572647" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c154bae4768e3bc94db42d93f5572647 = L.map(
+                "map_c154bae4768e3bc94db42d93f5572647",
+                {
+                    center: [46.9808880754046, 8.372768487538904],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7994c9f01867855ce9441a4c7331f836 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var marker_17fe2e21410f9469f686db71cfaff129 = L.marker(
+                [47.0883419696012, 8.43477993154596],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_404da5e5e7a6e8089dddee973dda4f0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_17fe2e21410f9469f686db71cfaff129.setIcon(icon_404da5e5e7a6e8089dddee973dda4f0f);
+        
+    
+        var popup_dfa7fe7b6aef4be87185a178b8251812 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e67a61517b0b4b21ff6a9da4c5866861 = $(`<div id="html_e67a61517b0b4b21ff6a9da4c5866861" style="width: 100.0%; height: 100.0%;"><b>Home Base --  Reto's Apartment (Jaistweg 6, Kussnacht am Rigi)</b><br>Enjoy your stay!  See users guide for details</div>`)[0];
+            popup_dfa7fe7b6aef4be87185a178b8251812.setContent(html_e67a61517b0b4b21ff6a9da4c5866861);
+        
+
+        marker_17fe2e21410f9469f686db71cfaff129.bindPopup(popup_dfa7fe7b6aef4be87185a178b8251812)
+        ;
+
+        
+    
+    
+            marker_17fe2e21410f9469f686db71cfaff129.bindTooltip(
+                `<div>
+                     Home Base --  Reto's Apartment (Jaistweg 6, Kussnacht am Rigi)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dcb2431a9758773f0bd4765c206b0c64 = L.marker(
+                [47.086298776288, 8.42965287605965],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_60dcc390e339e79bf2ffec2a8d9c78be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dcb2431a9758773f0bd4765c206b0c64.setIcon(icon_60dcc390e339e79bf2ffec2a8d9c78be);
+        
+    
+        var popup_794ed2e3d4cf549bde9703acf47d95c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f7abc9d61c9ab9e38ae8be358e12ff0 = $(`<div id="html_9f7abc9d61c9ab9e38ae8be358e12ff0" style="width: 100.0%; height: 100.0%;"><b>Farm Kiosk</b><br>Get super fresh eggs & jam (honor system). Bring coins. It's a 5min walk from the apt.<br><a href='https://www.myfarm.ch/en/farm-shops/kuessnacht-am-rigi/farm-store-hof-moosrueti_AHwS72v' target='_blank'>More info</a></div>`)[0];
+            popup_794ed2e3d4cf549bde9703acf47d95c7.setContent(html_9f7abc9d61c9ab9e38ae8be358e12ff0);
+        
+
+        marker_dcb2431a9758773f0bd4765c206b0c64.bindPopup(popup_794ed2e3d4cf549bde9703acf47d95c7)
+        ;
+
+        
+    
+    
+            marker_dcb2431a9758773f0bd4765c206b0c64.bindTooltip(
+                `<div>
+                     Farm Kiosk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19e4f39341d303c9f111b908019749c3 = L.marker(
+                [47.0901943275501, 8.43237218348815],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_29a47c53de2c7e1dd8bd0a9b19518444 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "flag-checkered", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_19e4f39341d303c9f111b908019749c3.setIcon(icon_29a47c53de2c7e1dd8bd0a9b19518444);
+        
+    
+        var popup_e49f66f3b962c2fde2377283df50310f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5459ae6747b61009180569d2fc56b6d5 = $(`<div id="html_5459ae6747b61009180569d2fc56b6d5" style="width: 100.0%; height: 100.0%;"><b>Golf course (or just hit some balls)</b><br>Driving range open to all.  Need handicap to play course<br><a href='https://www.golfkuessnacht.ch/en/golf-club.html' target='_blank'>More info</a></div>`)[0];
+            popup_e49f66f3b962c2fde2377283df50310f.setContent(html_5459ae6747b61009180569d2fc56b6d5);
+        
+
+        marker_19e4f39341d303c9f111b908019749c3.bindPopup(popup_e49f66f3b962c2fde2377283df50310f)
+        ;
+
+        
+    
+    
+            marker_19e4f39341d303c9f111b908019749c3.bindTooltip(
+                `<div>
+                     Golf course (or just hit some balls)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3069f5a46675cd52837d6ec58dc08600 = L.marker(
+                [47.081205213357, 8.44168478899524],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_ad0346042cfaa6cf53888affee2e3702 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3069f5a46675cd52837d6ec58dc08600.setIcon(icon_ad0346042cfaa6cf53888affee2e3702);
+        
+    
+        var popup_24f44683ee4f334ddb6e87be4f2b47c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a78a880f710f3f75fb36df333851b73 = $(`<div id="html_8a78a880f710f3f75fb36df333851b73" style="width: 100.0%; height: 100.0%;"><b>Martina Tuffli's childhood home</b><br>Her parents ran a grocery store (no longer exists)</div>`)[0];
+            popup_24f44683ee4f334ddb6e87be4f2b47c1.setContent(html_8a78a880f710f3f75fb36df333851b73);
+        
+
+        marker_3069f5a46675cd52837d6ec58dc08600.bindPopup(popup_24f44683ee4f334ddb6e87be4f2b47c1)
+        ;
+
+        
+    
+    
+            marker_3069f5a46675cd52837d6ec58dc08600.bindTooltip(
+                `<div>
+                     Martina Tuffli's childhood home
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_98b48df4a860992b9ca1006d764fa167 = L.marker(
+                [47.082650400297, 8.43977574224504],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_bff8bf563ce2690161a72098b1c23781 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-bag", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_98b48df4a860992b9ca1006d764fa167.setIcon(icon_bff8bf563ce2690161a72098b1c23781);
+        
+    
+        var popup_3e1463888694650780bcd1d94b8e4446 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0d1bb6664284584355d034390180326 = $(`<div id="html_a0d1bb6664284584355d034390180326" style="width: 100.0%; height: 100.0%;"><b>Coop - Grocery Store</b><br>One of the two main grocery stores in town<br><a href='https://www.coop.ch/en/locations/coop-supermarkt-kuessnacht-am-rigi/1149_POS?srsltid=AfmBOoqCQQP_31qyVppsMjB72nSi9P04BPfjBgrtq5U0HLo5BcyuACkp' target='_blank'>More info</a></div>`)[0];
+            popup_3e1463888694650780bcd1d94b8e4446.setContent(html_a0d1bb6664284584355d034390180326);
+        
+
+        marker_98b48df4a860992b9ca1006d764fa167.bindPopup(popup_3e1463888694650780bcd1d94b8e4446)
+        ;
+
+        
+    
+    
+            marker_98b48df4a860992b9ca1006d764fa167.bindTooltip(
+                `<div>
+                     Coop - Grocery Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4807cb92373721a8f865f187ea1cefa = L.marker(
+                [47.0840172982129, 8.44148536458731],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_b8bde13624aac1fe6ba1c857f087a6bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-bag", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a4807cb92373721a8f865f187ea1cefa.setIcon(icon_b8bde13624aac1fe6ba1c857f087a6bb);
+        
+    
+        var popup_721678ca9d74631e1ba16454263661a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33547144b2cd36d799ebb37fabce8ebf = $(`<div id="html_33547144b2cd36d799ebb37fabce8ebf" style="width: 100.0%; height: 100.0%;"><b>Migro - Grocery Store</b><br>One of the two main grocery stores in town<br><a href='https://www.rigimaert.ch/geschaefte/migros/' target='_blank'>More info</a></div>`)[0];
+            popup_721678ca9d74631e1ba16454263661a7.setContent(html_33547144b2cd36d799ebb37fabce8ebf);
+        
+
+        marker_a4807cb92373721a8f865f187ea1cefa.bindPopup(popup_721678ca9d74631e1ba16454263661a7)
+        ;
+
+        
+    
+    
+            marker_a4807cb92373721a8f865f187ea1cefa.bindTooltip(
+                `<div>
+                     Migro - Grocery Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_073e10cce69c867c1454182c5670d317 = L.marker(
+                [47.0801755373619, 8.438992790940478],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_8adb4cc54017233f95551dde4de12fd2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_073e10cce69c867c1454182c5670d317.setIcon(icon_8adb4cc54017233f95551dde4de12fd2);
+        
+    
+        var popup_77cb6288cebc85e53a0e3e8502f4cab2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_260577e7db121a807769cf9f5690b097 = $(`<div id="html_260577e7db121a807769cf9f5690b097" style="width: 100.0%; height: 100.0%;"><b>Hotel Restaurant Seehof (Lakeside Dining)</b><br>Have a bite or dessert on the lakeside terrace.<br><a href='https://www.luzern.com/en/hotel/hotel-restaurant-seehof' target='_blank'>More info</a></div>`)[0];
+            popup_77cb6288cebc85e53a0e3e8502f4cab2.setContent(html_260577e7db121a807769cf9f5690b097);
+        
+
+        marker_073e10cce69c867c1454182c5670d317.bindPopup(popup_77cb6288cebc85e53a0e3e8502f4cab2)
+        ;
+
+        
+    
+    
+            marker_073e10cce69c867c1454182c5670d317.bindTooltip(
+                `<div>
+                     Hotel Restaurant Seehof (Lakeside Dining)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25387c099bc10d97ffe060b0073b8e35 = L.marker(
+                [47.073615, 8.433874],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_eb489635a9e7238e5d85251cf0fef72a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_25387c099bc10d97ffe060b0073b8e35.setIcon(icon_eb489635a9e7238e5d85251cf0fef72a);
+        
+    
+        var popup_ac9fc8fc0abc2c5b1cb55ae8ce5c7f99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c572cc94761d316cea2f617d0b232dd = $(`<div id="html_9c572cc94761d316cea2f617d0b232dd" style="width: 100.0%; height: 100.0%;"><b>Strandbad Seeburg (Local Beach)</b><br>Local beach with food and facilities; great on warm days.<br><a href='https://www.badi-info.ch/a/kuessnacht-strandbad.html' target='_blank'>More info</a></div>`)[0];
+            popup_ac9fc8fc0abc2c5b1cb55ae8ce5c7f99.setContent(html_9c572cc94761d316cea2f617d0b232dd);
+        
+
+        marker_25387c099bc10d97ffe060b0073b8e35.bindPopup(popup_ac9fc8fc0abc2c5b1cb55ae8ce5c7f99)
+        ;
+
+        
+    
+    
+            marker_25387c099bc10d97ffe060b0073b8e35.bindTooltip(
+                `<div>
+                     Strandbad Seeburg (Local Beach)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11a7d78c28367d97942a157c550d5c77 = L.marker(
+                [47.0690360632741, 8.46677242952295],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_75dd710c795fe23185f430b3ee1d9654 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_11a7d78c28367d97942a157c550d5c77.setIcon(icon_75dd710c795fe23185f430b3ee1d9654);
+        
+    
+        var popup_5d24c0d4df69ccf76992a294849136ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7b821fc7dc2f02fa96dd95fc2b71405 = $(`<div id="html_e7b821fc7dc2f02fa96dd95fc2b71405" style="width: 100.0%; height: 100.0%;"><b>Seebodenalp (favorite local hike)</b><br>Short local hike (20 mins each way). Stop for a snack at Ruodisegg at end of hike.  Take aerial tram if no car.<br><a href='https://www.seebodenalp.ch/' target='_blank'>More info</a></div>`)[0];
+            popup_5d24c0d4df69ccf76992a294849136ac.setContent(html_e7b821fc7dc2f02fa96dd95fc2b71405);
+        
+
+        marker_11a7d78c28367d97942a157c550d5c77.bindPopup(popup_5d24c0d4df69ccf76992a294849136ac)
+        ;
+
+        
+    
+    
+            marker_11a7d78c28367d97942a157c550d5c77.bindTooltip(
+                `<div>
+                     Seebodenalp (favorite local hike)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03bba6656c3f1b362e8f1dfa7b4fd78b = L.marker(
+                [47.0577377374385, 8.45340780245644],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_ebdd7116e5805e8f5cafe0085c083c10 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_03bba6656c3f1b362e8f1dfa7b4fd78b.setIcon(icon_ebdd7116e5805e8f5cafe0085c083c10);
+        
+    
+        var popup_4252cb0509ea3f6af28c222d39bf4bb9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_318e10d3f3890340691e589dd2fb7016 = $(`<div id="html_318e10d3f3890340691e589dd2fb7016" style="width: 100.0%; height: 100.0%;"><b>Ruodisegg (end of short hike along Seebodenalp)</b><br>nan</div>`)[0];
+            popup_4252cb0509ea3f6af28c222d39bf4bb9.setContent(html_318e10d3f3890340691e589dd2fb7016);
+        
+
+        marker_03bba6656c3f1b362e8f1dfa7b4fd78b.bindPopup(popup_4252cb0509ea3f6af28c222d39bf4bb9)
+        ;
+
+        
+    
+    
+            marker_03bba6656c3f1b362e8f1dfa7b4fd78b.bindTooltip(
+                `<div>
+                     Ruodisegg (end of short hike along Seebodenalp)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f0c22c62e2e70f6c98daa2bfdf09ed6 = L.marker(
+                [47.0761223902914, 8.43989537364639],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_6b3a5ed26cd789488e81be4e8da7f942 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "arrow-up", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4f0c22c62e2e70f6c98daa2bfdf09ed6.setIcon(icon_6b3a5ed26cd789488e81be4e8da7f942);
+        
+    
+        var popup_3f03f09bfbc2212fa7ad0d60b05a0546 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c31cc26352499f2cc9ff38e917686f7 = $(`<div id="html_0c31cc26352499f2cc9ff38e917686f7" style="width: 100.0%; height: 100.0%;"><b>Areal tram to Seebodenalp</b><br>Tram station in town<br><a href='https://www.rigi.ch/en/attractions/kuessnacht-seebodenalp-aerial-cable-car-b94b5f02fc' target='_blank'>More info</a></div>`)[0];
+            popup_3f03f09bfbc2212fa7ad0d60b05a0546.setContent(html_0c31cc26352499f2cc9ff38e917686f7);
+        
+
+        marker_4f0c22c62e2e70f6c98daa2bfdf09ed6.bindPopup(popup_3f03f09bfbc2212fa7ad0d60b05a0546)
+        ;
+
+        
+    
+    
+            marker_4f0c22c62e2e70f6c98daa2bfdf09ed6.bindTooltip(
+                `<div>
+                     Areal tram to Seebodenalp
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f1b746e0beeb6fc365e1e16493045b5 = L.marker(
+                [47.0502, 8.3093],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_20548391f8c4dc1a506db701d891ca42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1f1b746e0beeb6fc365e1e16493045b5.setIcon(icon_20548391f8c4dc1a506db701d891ca42);
+        
+    
+        var popup_c24a41980797325c34b4aa5a777248a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ff354952becd90297f2fb1f0ae5cfef = $(`<div id="html_8ff354952becd90297f2fb1f0ae5cfef" style="width: 100.0%; height: 100.0%;"><b>Lucerne (Old Town, Chapel Bridge)</b><br>Stroll Old Town, Chapel Bridge, Lion Monument, lakeside promenade. Easy train ride into town from Kussnacht<br><a href='https://www.luzern.com/en/' target='_blank'>More info</a></div>`)[0];
+            popup_c24a41980797325c34b4aa5a777248a5.setContent(html_8ff354952becd90297f2fb1f0ae5cfef);
+        
+
+        marker_1f1b746e0beeb6fc365e1e16493045b5.bindPopup(popup_c24a41980797325c34b4aa5a777248a5)
+        ;
+
+        
+    
+    
+            marker_1f1b746e0beeb6fc365e1e16493045b5.bindTooltip(
+                `<div>
+                     Lucerne (Old Town, Chapel Bridge)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2854eef87962b318c7851fea8d165fe = L.marker(
+                [47.0515917543624, 8.30746927377216],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_57d38f324037fd6b561eb713a207007c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b2854eef87962b318c7851fea8d165fe.setIcon(icon_57d38f324037fd6b561eb713a207007c);
+        
+    
+        var popup_e7960fbf0a84e28e4ad6ad25b9ac0f3b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_096ee9527a4db2a86eef1cfc4fc70d3c = $(`<div id="html_096ee9527a4db2a86eef1cfc4fc70d3c" style="width: 100.0%; height: 100.0%;"><b>Chapel Bridge</b><br>Top landmark</div>`)[0];
+            popup_e7960fbf0a84e28e4ad6ad25b9ac0f3b.setContent(html_096ee9527a4db2a86eef1cfc4fc70d3c);
+        
+
+        marker_b2854eef87962b318c7851fea8d165fe.bindPopup(popup_e7960fbf0a84e28e4ad6ad25b9ac0f3b)
+        ;
+
+        
+    
+    
+            marker_b2854eef87962b318c7851fea8d165fe.bindTooltip(
+                `<div>
+                     Chapel Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de12052c7f988c6fe0a396c08017d655 = L.marker(
+                [47.0534426865594, 8.30837869871546],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_f0b54304ae2c2af83f34d3e6337e52f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_de12052c7f988c6fe0a396c08017d655.setIcon(icon_f0b54304ae2c2af83f34d3e6337e52f8);
+        
+    
+        var popup_18cc708d028178a7ea1ff11819e1e399 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02697179de41dcacccafbb00678a1459 = $(`<div id="html_02697179de41dcacccafbb00678a1459" style="width: 100.0%; height: 100.0%;"><b>Bucherer Watch Store</b><br>Flagship store. Five floors of expensive watches</div>`)[0];
+            popup_18cc708d028178a7ea1ff11819e1e399.setContent(html_02697179de41dcacccafbb00678a1459);
+        
+
+        marker_de12052c7f988c6fe0a396c08017d655.bindPopup(popup_18cc708d028178a7ea1ff11819e1e399)
+        ;
+
+        
+    
+    
+            marker_de12052c7f988c6fe0a396c08017d655.bindTooltip(
+                `<div>
+                     Bucherer Watch Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0f9c26207700002a27447431135c9f8d = L.marker(
+                [47.0525287, 8.3355776],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_1b9b47c8c066cdedc9b7273cb32be2fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0f9c26207700002a27447431135c9f8d.setIcon(icon_1b9b47c8c066cdedc9b7273cb32be2fb);
+        
+    
+        var popup_c4b58f1506740bceb763977ce5a669ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_270acaaf8d955162881f48cb7adf9f9a = $(`<div id="html_270acaaf8d955162881f48cb7adf9f9a" style="width: 100.0%; height: 100.0%;"><b>Swiss Museum of Transport (Verkehrshaus)</b><br>Rainy day favorite with IMAX; easy by train/boat.<br><a href='https://www.verkehrshaus.ch/en/' target='_blank'>More info</a></div>`)[0];
+            popup_c4b58f1506740bceb763977ce5a669ba.setContent(html_270acaaf8d955162881f48cb7adf9f9a);
+        
+
+        marker_0f9c26207700002a27447431135c9f8d.bindPopup(popup_c4b58f1506740bceb763977ce5a669ba)
+        ;
+
+        
+    
+    
+            marker_0f9c26207700002a27447431135c9f8d.bindTooltip(
+                `<div>
+                     Swiss Museum of Transport (Verkehrshaus)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_db8583164a35009f448578fe40c1f9f7 = L.marker(
+                [47.0512849459965, 8.31077973967951],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_416661ee307f0cde0318a75d7b7aefda = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "ship", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_db8583164a35009f448578fe40c1f9f7.setIcon(icon_416661ee307f0cde0318a75d7b7aefda);
+        
+    
+        var popup_8af4bcae7d4f646473384e544384b76e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_905dcce56789db624c53a5b8e1898636 = $(`<div id="html_905dcce56789db624c53a5b8e1898636" style="width: 100.0%; height: 100.0%;"><b>Lake Lucerne Boat Ride (Lucerne piers)</b><br>Best to start from Lucerne piers for most options; classic paddle steamers.<br><a href='https://www.lakelucerne.ch/en/' target='_blank'>More info</a></div>`)[0];
+            popup_8af4bcae7d4f646473384e544384b76e.setContent(html_905dcce56789db624c53a5b8e1898636);
+        
+
+        marker_db8583164a35009f448578fe40c1f9f7.bindPopup(popup_8af4bcae7d4f646473384e544384b76e)
+        ;
+
+        
+    
+    
+            marker_db8583164a35009f448578fe40c1f9f7.bindTooltip(
+                `<div>
+                     Lake Lucerne Boat Ride (Lucerne piers)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_98e38ce478fedbcb39108fbad14448e1 = L.marker(
+                [47.0104, 8.4761],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_67eafc0cbdf3fe8565003e1443e393cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "train", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_98e38ce478fedbcb39108fbad14448e1.setIcon(icon_67eafc0cbdf3fe8565003e1443e393cc);
+        
+    
+        var popup_e007c5a545fc380d5f3d2abe941ac464 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_02edfdb74515370697ab30f0d450ad72 = $(`<div id="html_02edfdb74515370697ab30f0d450ad72" style="width: 100.0%; height: 100.0%;"><b>Mount Rigi (Vitznau cogwheel start)</b><br>Rigi Bahnen cogwheel railway starts here.<br><a href='https://www.rigi.ch/en' target='_blank'>More info</a></div>`)[0];
+            popup_e007c5a545fc380d5f3d2abe941ac464.setContent(html_02edfdb74515370697ab30f0d450ad72);
+        
+
+        marker_98e38ce478fedbcb39108fbad14448e1.bindPopup(popup_e007c5a545fc380d5f3d2abe941ac464)
+        ;
+
+        
+    
+    
+            marker_98e38ce478fedbcb39108fbad14448e1.bindTooltip(
+                `<div>
+                     Mount Rigi (Vitznau cogwheel start)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6215f3bd7a32c05a8cc293f6499c75c8 = L.marker(
+                [47.0326, 8.4336],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_775373370a158ff83afb2f74cde99287 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6215f3bd7a32c05a8cc293f6499c75c8.setIcon(icon_775373370a158ff83afb2f74cde99287);
+        
+    
+        var popup_552812362c4d5467ede7148895fc3a82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78b586b8ad8329b8151cee09a2443d96 = $(`<div id="html_78b586b8ad8329b8151cee09a2443d96" style="width: 100.0%; height: 100.0%;"><b>Mount Rigi (Weggis cable car)</b><br>Aerial tram from Weggis up to Rigi Kaltbad.<br><a href='https://www.rigi.ch/en' target='_blank'>More info</a></div>`)[0];
+            popup_552812362c4d5467ede7148895fc3a82.setContent(html_78b586b8ad8329b8151cee09a2443d96);
+        
+
+        marker_6215f3bd7a32c05a8cc293f6499c75c8.bindPopup(popup_552812362c4d5467ede7148895fc3a82)
+        ;
+
+        
+    
+    
+            marker_6215f3bd7a32c05a8cc293f6499c75c8.bindTooltip(
+                `<div>
+                     Mount Rigi (Weggis cable car)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cf14b613823c495c00a579515da1d7fc = L.marker(
+                [46.979, 8.253],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_8293096fe6b78a40024d19f61a482fb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cf14b613823c495c00a579515da1d7fc.setIcon(icon_8293096fe6b78a40024d19f61a482fb1);
+        
+    
+        var popup_8d6d9b8063e1f80a75969eb9432e444d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce0f9e8d802e3dac1e0a25a6062e54a6 = $(`<div id="html_ce0f9e8d802e3dac1e0a25a6062e54a6" style="width: 100.0%; height: 100.0%;"><b>Mount Pilatus (Pilatus Kulm)</b><br>Worldâ€™s steepest cogwheel railway or aerial tram; epic views.<br><a href='https://www.pilatus.ch/en' target='_blank'>More info</a></div>`)[0];
+            popup_8d6d9b8063e1f80a75969eb9432e444d.setContent(html_ce0f9e8d802e3dac1e0a25a6062e54a6);
+        
+
+        marker_cf14b613823c495c00a579515da1d7fc.bindPopup(popup_8d6d9b8063e1f80a75969eb9432e444d)
+        ;
+
+        
+    
+    
+            marker_cf14b613823c495c00a579515da1d7fc.bindTooltip(
+                `<div>
+                     Mount Pilatus (Pilatus Kulm)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7999a65c94f8db2c2d98eb10f3afc457 = L.marker(
+                [46.996836187572, 8.37920282875897],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_30ff2ac91c5b80fd66b111cc6c891ab1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7999a65c94f8db2c2d98eb10f3afc457.setIcon(icon_30ff2ac91c5b80fd66b111cc6c891ab1);
+        
+    
+        var popup_21a2a602a7f9c4c21020d41606f86af9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d9a6f21a06c02bd588f2fd91bf8b319 = $(`<div id="html_8d9a6f21a06c02bd588f2fd91bf8b319" style="width: 100.0%; height: 100.0%;"><b>Burgenstock (chic resort for well heeled / celebrities)</b><br>Great views.  Great hike along cliff to </div>`)[0];
+            popup_21a2a602a7f9c4c21020d41606f86af9.setContent(html_8d9a6f21a06c02bd588f2fd91bf8b319);
+        
+
+        marker_7999a65c94f8db2c2d98eb10f3afc457.bindPopup(popup_21a2a602a7f9c4c21020d41606f86af9)
+        ;
+
+        
+    
+    
+            marker_7999a65c94f8db2c2d98eb10f3afc457.bindTooltip(
+                `<div>
+                     Burgenstock (chic resort for well heeled / celebrities)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ddda0222f801e92a19dca251e95d070c = L.marker(
+                [47.0015006246576, 8.39627617347001],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_62be4c6d5277a2ac48bb7a2465891f0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ddda0222f801e92a19dca251e95d070c.setIcon(icon_62be4c6d5277a2ac48bb7a2465891f0a);
+        
+    
+        var popup_6582da3784369459cf07d21e85fd9da3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9694afa1101b70aa90c5967314c13ea1 = $(`<div id="html_9694afa1101b70aa90c5967314c13ea1" style="width: 100.0%; height: 100.0%;"><b>Hammetschwand Elevator</b><br>On the hike along clif from Burgenstock.  Great views.  Optionally walk back down to Burgenstock<br><a href='https://burgenstockresort.com/en/activities-and-experiences/hammetschwand-lift' target='_blank'>More info</a></div>`)[0];
+            popup_6582da3784369459cf07d21e85fd9da3.setContent(html_9694afa1101b70aa90c5967314c13ea1);
+        
+
+        marker_ddda0222f801e92a19dca251e95d070c.bindPopup(popup_6582da3784369459cf07d21e85fd9da3)
+        ;
+
+        
+    
+    
+            marker_ddda0222f801e92a19dca251e95d070c.bindTooltip(
+                `<div>
+                     Hammetschwand Elevator
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_37c75c137335515986bf7c8ff29c9331 = L.marker(
+                [46.9789, 8.6684],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_ec140a52fa197ab868d8b337b8f6a4fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_37c75c137335515986bf7c8ff29c9331.setIcon(icon_ec140a52fa197ab868d8b337b8f6a4fd);
+        
+    
+        var popup_adf9ac330ca835d58cca5f1857782c65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5b4c5ae8ca3e3d8d43fc0441ab5aa1d = $(`<div id="html_e5b4c5ae8ca3e3d8d43fc0441ab5aa1d" style="width: 100.0%; height: 100.0%;"><b>Stoos Ridge Hike (Klingenstock to Fronalpstock)</b><br>Steep funicular to Stoos, chairlift, 2 hour ridge hike to Fronalpstock, chairlift down.<br><a href='https://stoos-muotatal.ch/en/' target='_blank'>More info</a></div>`)[0];
+            popup_adf9ac330ca835d58cca5f1857782c65.setContent(html_e5b4c5ae8ca3e3d8d43fc0441ab5aa1d);
+        
+
+        marker_37c75c137335515986bf7c8ff29c9331.bindPopup(popup_adf9ac330ca835d58cca5f1857782c65)
+        ;
+
+        
+    
+    
+            marker_37c75c137335515986bf7c8ff29c9331.bindTooltip(
+                `<div>
+                     Stoos Ridge Hike (Klingenstock to Fronalpstock)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0236c3dff322b3971919b218d3a92328 = L.marker(
+                [46.9912905095115, 8.6732953043478],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_bfce3ff9cfb5608b02096d7919e014f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "exchange", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0236c3dff322b3971919b218d3a92328.setIcon(icon_bfce3ff9cfb5608b02096d7919e014f3);
+        
+    
+        var popup_c4ee9812860e08d75d2903703459c58a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1a36d384c0de7197e360c3dcf636ae6 = $(`<div id="html_e1a36d384c0de7197e360c3dcf636ae6" style="width: 100.0%; height: 100.0%;"><b>Start place for Stoos (steepest funicular)</b><br>nan</div>`)[0];
+            popup_c4ee9812860e08d75d2903703459c58a.setContent(html_e1a36d384c0de7197e360c3dcf636ae6);
+        
+
+        marker_0236c3dff322b3971919b218d3a92328.bindPopup(popup_c4ee9812860e08d75d2903703459c58a)
+        ;
+
+        
+    
+    
+            marker_0236c3dff322b3971919b218d3a92328.bindTooltip(
+                `<div>
+                     Start place for Stoos (steepest funicular)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4014ad49b8bcf53f0f5343b2559ead70 = L.marker(
+                [46.9569232276736, 8.67594085941027],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_a19a3c2634ccd88d3c765373b9dafafe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4014ad49b8bcf53f0f5343b2559ead70.setIcon(icon_a19a3c2634ccd88d3c765373b9dafafe);
+        
+    
+        var popup_4f4d97f42a3d176335f0d77ee3961704 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f17f470bdf7df4368063cb42d32f8df3 = $(`<div id="html_f17f470bdf7df4368063cb42d32f8df3" style="width: 100.0%; height: 100.0%;"><b>Klingenstock (start of hike)</b><br>Take lift up to start hike</div>`)[0];
+            popup_4f4d97f42a3d176335f0d77ee3961704.setContent(html_f17f470bdf7df4368063cb42d32f8df3);
+        
+
+        marker_4014ad49b8bcf53f0f5343b2559ead70.bindPopup(popup_4f4d97f42a3d176335f0d77ee3961704)
+        ;
+
+        
+    
+    
+            marker_4014ad49b8bcf53f0f5343b2559ead70.bindTooltip(
+                `<div>
+                     Klingenstock (start of hike)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_31470a4eec4cf20bab9a51b1285084a5 = L.marker(
+                [46.9696219985417, 8.63741024906172],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_f3d7ef55948e6a1321777fce55e1ba32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_31470a4eec4cf20bab9a51b1285084a5.setIcon(icon_f3d7ef55948e6a1321777fce55e1ba32);
+        
+    
+        var popup_d7f8ac63e8be8867719bc4fd3480dcb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa72d3d44779ac026530f2411310cd44 = $(`<div id="html_fa72d3d44779ac026530f2411310cd44" style="width: 100.0%; height: 100.0%;"><b>Fronalpstock (end of hike)</b><br>Take lift down</div>`)[0];
+            popup_d7f8ac63e8be8867719bc4fd3480dcb1.setContent(html_fa72d3d44779ac026530f2411310cd44);
+        
+
+        marker_31470a4eec4cf20bab9a51b1285084a5.bindPopup(popup_d7f8ac63e8be8867719bc4fd3480dcb1)
+        ;
+
+        
+    
+    
+            marker_31470a4eec4cf20bab9a51b1285084a5.bindTooltip(
+                `<div>
+                     Fronalpstock (end of hike)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e858e132748e83d8a7ea10360b30f85c = L.marker(
+                [46.9951269135914, 8.4028306154636],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_022f1a8960e1cb4b01a13676c8f38c0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e858e132748e83d8a7ea10360b30f85c.setIcon(icon_022f1a8960e1cb4b01a13676c8f38c0a);
+        
+    
+        var popup_d797ce0056c22fe6fd4cb54fd26527f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aba47aece5ca41e246dc17c5b8c1df88 = $(`<div id="html_aba47aece5ca41e246dc17c5b8c1df88" style="width: 100.0%; height: 100.0%;"><b>Hotel Villa Honegg (20 min hike from Burgenstock)</b><br>Beautiful views.  Have a dessert on the back terrace. Check out the outdoor pool<br><a href='https://villa-honegg.ch/' target='_blank'>More info</a></div>`)[0];
+            popup_d797ce0056c22fe6fd4cb54fd26527f8.setContent(html_aba47aece5ca41e246dc17c5b8c1df88);
+        
+
+        marker_e858e132748e83d8a7ea10360b30f85c.bindPopup(popup_d797ce0056c22fe6fd4cb54fd26527f8)
+        ;
+
+        
+    
+    
+            marker_e858e132748e83d8a7ea10360b30f85c.bindTooltip(
+                `<div>
+                     Hotel Villa Honegg (20 min hike from Burgenstock)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b63189b80ae6c0f703ff49782e70d67b = L.marker(
+                [46.593, 7.9076],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_68c4d21b28388bbc8b254e2c49a55233 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b63189b80ae6c0f703ff49782e70d67b.setIcon(icon_68c4d21b28388bbc8b254e2c49a55233);
+        
+    
+        var popup_9be21fb776966763535db93b7050e27a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00591c49eb12d97d0d55da119a11e736 = $(`<div id="html_00591c49eb12d97d0d55da119a11e736" style="width: 100.0%; height: 100.0%;"><b>Jungfrau Region - Lauterbrunnen</b><br>Waterfalls & valley views; gateway to Wengen / Murren<br><a href='https://jungfrauregion.swiss/en/' target='_blank'>More info</a></div>`)[0];
+            popup_9be21fb776966763535db93b7050e27a.setContent(html_00591c49eb12d97d0d55da119a11e736);
+        
+
+        marker_b63189b80ae6c0f703ff49782e70d67b.bindPopup(popup_9be21fb776966763535db93b7050e27a)
+        ;
+
+        
+    
+    
+            marker_b63189b80ae6c0f703ff49782e70d67b.bindTooltip(
+                `<div>
+                     Jungfrau Region - Lauterbrunnen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_232ac8858e7894e48a3bcc387059a27f = L.marker(
+                [46.562, 7.8921],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_c5af52c683f6183501a614fb148ce49b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_232ac8858e7894e48a3bcc387059a27f.setIcon(icon_c5af52c683f6183501a614fb148ce49b);
+        
+    
+        var popup_894999e92796707ecc77b3cc431fbae9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_edbdec25b16648824b4bcb02a1fdafe8 = $(`<div id="html_edbdec25b16648824b4bcb02a1fdafe8" style="width: 100.0%; height: 100.0%;"><b>Jungfrau Region - Murren</b><br>Clifftop village with big views.<br><a href='https://jungfrauregion.swiss/en/' target='_blank'>More info</a></div>`)[0];
+            popup_894999e92796707ecc77b3cc431fbae9.setContent(html_edbdec25b16648824b4bcb02a1fdafe8);
+        
+
+        marker_232ac8858e7894e48a3bcc387059a27f.bindPopup(popup_894999e92796707ecc77b3cc431fbae9)
+        ;
+
+        
+    
+    
+            marker_232ac8858e7894e48a3bcc387059a27f.bindTooltip(
+                `<div>
+                     Jungfrau Region - Murren
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6188dfa91e6b09929bb010920b2cc77a = L.marker(
+                [46.6242, 8.0414],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_c81872d117e635a8a00127d014d15d60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6188dfa91e6b09929bb010920b2cc77a.setIcon(icon_c81872d117e635a8a00127d014d15d60);
+        
+    
+        var popup_f6371f3a14314cb61035db02797f55d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3c0a2f4ea5c4877d8bce92f2a07f51b = $(`<div id="html_f3c0a2f4ea5c4877d8bce92f2a07f51b" style="width: 100.0%; height: 100.0%;"><b>Jungfrau Region - Grindelwald</b><br>Base for Eiger views and mountain excursions.<br><a href='https://jungfrauregion.swiss/en/' target='_blank'>More info</a></div>`)[0];
+            popup_f6371f3a14314cb61035db02797f55d8.setContent(html_f3c0a2f4ea5c4877d8bce92f2a07f51b);
+        
+
+        marker_6188dfa91e6b09929bb010920b2cc77a.bindPopup(popup_f6371f3a14314cb61035db02797f55d8)
+        ;
+
+        
+    
+    
+            marker_6188dfa91e6b09929bb010920b2cc77a.bindTooltip(
+                `<div>
+                     Jungfrau Region - Grindelwald
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77ae35244d422d7c2763a379fe83de86 = L.marker(
+                [46.6068, 7.9217],
+                {}
+            ).addTo(map_c154bae4768e3bc94db42d93f5572647);
+        
+    
+            var icon_365c00cddcbf9e37708f8cfeb6c728f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-circle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_77ae35244d422d7c2763a379fe83de86.setIcon(icon_365c00cddcbf9e37708f8cfeb6c728f0);
+        
+    
+        var popup_6d3ee59035ab9c5b8461d2bda3777a4f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7eda69ae94275ed443dc8a550aeb856 = $(`<div id="html_e7eda69ae94275ed443dc8a550aeb856" style="width: 100.0%; height: 100.0%;"><b>Jungfrau Region - Wengen</b><br>Car-free village perched above the valley.<br><a href='https://jungfrauregion.swiss/en/' target='_blank'>More info</a></div>`)[0];
+            popup_6d3ee59035ab9c5b8461d2bda3777a4f.setContent(html_e7eda69ae94275ed443dc8a550aeb856);
+        
+
+        marker_77ae35244d422d7c2763a379fe83de86.bindPopup(popup_6d3ee59035ab9c5b8461d2bda3777a4f)
+        ;
+
+        
+    
+    
+            marker_77ae35244d422d7c2763a379fe83de86.bindTooltip(
+                `<div>
+                     Jungfrau Region - Wengen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
