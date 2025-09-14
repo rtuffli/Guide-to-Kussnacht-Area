@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 • Küssnacht Area Guide • POIs (AwesomeMarkers)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { width: 100%; height: 100%; }
+    .legend {
+      position: absolute; bottom: 16px; left: 16px; z-index: 1000;
+      background: rgba(255,255,255,0.95); padding: 10px 12px; border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      max-width: 280px;
+    }
+    .legend .row { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+    .legend i.fa { width: 18px; text-align: center; }
+    .legend .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; margin-right: 6px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="legend" id="legend"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script>
+  <script src="data.js"></script>
+  <script>
+    // Default center
+    const DEFAULT = { lat: 47.0850, lng: 8.4430, z: 13 };
+
+    // Deep link support
+    function getParams() {
+      const out = {};
+      const qs = new URLSearchParams(location.search);
+      for (const [k, v] of qs.entries()) out[k] = v;
+      if (location.hash && location.hash.length > 1) {
+        const hs = new URLSearchParams(location.hash.slice(1));
+        for (const [k, v] of hs.entries()) if (!(k in out)) out[k] = v;
+      }
+      return out;
+    }
+    function f(x, def){ const v = parseFloat(x); return Number.isFinite(v) ? v : def; }
+
+    // Mapping color -> AwesomeMarkers markerColor & symbol
+    // You asked for common pin shape with different symbols/colors.
+    const SYMBOL_BY_COLOR = {
+      "green":  { markerColor: "green",  icon: "person-hiking", label: "Hike / Trails" },
+      "blue":   { markerColor: "blue",   icon: "umbrella-beach", label: "Beach / Swimming" },
+      "red":    { markerColor: "red",    icon: "utensils",       label: "Food / Café / Kiosk" },
+      "orange": { markerColor: "orange", icon: "landmark",       label: "Museum / Culture" },
+      "purple": { markerColor: "purple", icon: "city",           label: "Town / Village" },
+      "darkblue": { markerColor: "darkblue", icon: "ship",       label: "Ferry / Boat" },
+      "cadetblue": { markerColor: "cadetblue", icon: "mountain-sun", label: "Cable Car / Funicular" },
+      "brown": { markerColor: "brown",   icon: "bed",            label: "Hotel / Lodging" },
+      "":       { markerColor: "darkpurple", icon: "location-dot", label: "Other" }
+    };
+
+    function iconFor(color) {
+      const entry = SYMBOL_BY_COLOR[(color || "").toLowerCase()] || SYMBOL_BY_COLOR[""];
+      return L.AwesomeMarkers.icon({
+        icon: entry.icon, prefix: "fa",
+        markerColor: entry.markerColor, iconColor: "white"
+      });
+    }
+
+    // Build map
+    const p = getParams();
+    const center = [ f(p.lat, DEFAULT.lat), f(p.lng, DEFAULT.lng) ];
+    const zoom   = parseInt(p.z || DEFAULT.z, 10);
+    const map = L.map('map').setView(center, zoom);
+    window.map = map;
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const pois = Array.isArray(window.POIS) ? window.POIS : [];
+    const groups = {};
+
+    pois.forEach(d => {
+      if (!(Number.isFinite(d.lat) && Number.isFinite(d.lng))) return;
+      const color = (d.icon_color || "").toLowerCase();
+      const marker = L.marker([d.lat, d.lng], { icon: iconFor(color) })
+        .bindPopup(`<b>${d.name || "(Unnamed)"}<\/b><br>${d.description || ""}`);
+      if (!groups[color]) groups[color] = L.layerGroup().addTo(map);
+      groups[color].addLayer(marker);
+    });
+
+    // Legend
+    const legend = document.getElementById("legend");
+    const used = Object.keys(groups);
+    const rows = used.map(c => {
+      const e = SYMBOL_BY_COLOR[c] || SYMBOL_BY_COLOR[""];
+      const colorName = e.markerColor;
+      return `<div class="row"><span class="swatch" style="background:${colorName};"></span> ${e.label} <small>(<code>${c || "other"}</code>)</small></div>`;
+    }).join("");
+    legend.innerHTML = `<b>Legend</b><br>${rows || "No categories detected"}`;
+
+  </script>
+</body>
+</html>
