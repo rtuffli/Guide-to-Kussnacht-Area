@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Küssnacht Area Guide • POIs (Inline, No Plugins)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { width: 100%; height: 100%; }
+    .legend {
+      position: absolute; bottom: 16px; left: 16px; z-index: 1000;
+      background: rgba(255,255,255,0.95); padding: 10px 12px; border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12); font: 14px system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    .legend .row { display:flex; align-items:center; gap:8px; margin:4px 0; }
+    .legend img { width: 18px; height: 28px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="legend" id="legend"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Embedded POIs
+    window.POIS = [{"name": "Home Base --  Reto's Apartment (Jaistweg 6, Kussnacht am Rigi)", "lat": 47.0883419696012, "lng": 8.43477993154596, "category": "red", "description": "Enjoy your stay!  See users guide for details"}, {"name": "Farm Kiosk", "lat": 47.086298776288, "lng": 8.42965287605965, "category": "green", "description": "Get super fresh eggs & jam (honor system). Bring coins. It's a 5min walk from the apt."}, {"name": "Golf course (or just hit some balls)", "lat": 47.0901943275501, "lng": 8.43237218348815, "category": "blue", "description": "Driving range open to all.  Need handicap to play course"}, {"name": "Kussnacht town center (Dorfplatz)", "lat": 47.0813976066635, "lng": 8.44130583088118, "category": "blue", "description": "Center of town"}, {"name": "Martina Tuffli's childhood home", "lat": 47.081205213357, "lng": 8.44168478899524, "category": "blue", "description": "Her parents ran a grocery store (no longer exists)"}, {"name": "Coop - Grocery Store", "lat": 47.082650400297, "lng": 8.43977574224504, "category": "green", "description": "One of the two main grocery stores in town"}, {"name": "Migro - Grocery Store", "lat": 47.0840172982129, "lng": 8.44148536458731, "category": "green", "description": "One of the two main grocery stores in town"}, {"name": "Hotel Restaurant Seehof (Lakeside Dining)", "lat": null, "lng": null, "category": "blue", "description": "Have a bite or dessert on the lakeside terrace."}, {"name": "Strandbad Seeburg (Local Beach)", "lat": 47.073615, "lng": 8.433874, "category": "blue", "description": "Local beach with food and facilities; great on warm days."}, {"name": "Seebodenalp (favorite local hike)", "lat": 47.0689616491004, "lng": 8.4668011772483, "category": "blue", "description": "Short local hike (20 mins each way). Stop for a snack at Ruodisegg at end of hike.  Take aerial tram if no car."}, {"name": "Ruodisegg (end of short hike along Seebodenalp)", "lat": 47.0577377374385, "lng": 8.45340780245644, "category": "blue", "description": ""}, {"name": "Rigi (main local mountain and \"Queen of the Mountains\"", "lat": 47.0566686222885, "lng": 8.48507128092543, "category": "blue", "description": "This spot is the Rigi Kulm (summit). Great views.  Train goes all the way to here.  Restaurant and hotel there."}, {"name": "Areal tram to Seebodenalp", "lat": 47.0761223902914, "lng": 8.43989537364639, "category": "blue", "description": "Tram station in town"}, {"name": "Lucerne (Old Town, Chapel Bridge)", "lat": 47.0502, "lng": 8.3093, "category": "blue", "description": "Stroll Old Town, Chapel Bridge, Lion Monument, lakeside promenade. Easy train ride into town from Kussnacht"}, {"name": "Chapel Bridge", "lat": 47.0515917543624, "lng": 8.30746927377216, "category": "blue", "description": "Top landmark"}, {"name": "Bucherer Watch Store", "lat": 47.0534426865594, "lng": 8.30837869871546, "category": "blue", "description": "Flagship store. Five floors of expensive watches"}, {"name": "Swiss Museum of Transport (Verkehrshaus)", "lat": 47.0525287, "lng": 8.3355776, "category": "blue", "description": "Rainy day favorite with IMAX; easy by train/boat."}, {"name": "Lake Lucerne Boat Ride (Lucerne piers)", "lat": 47.0512849459965, "lng": 8.31077973967951, "category": "blue", "description": "Best to start from Lucerne piers for most options; classic paddle steamers."}, {"name": "Mount Rigi (Vitznau cogwheel start)", "lat": 47.0104, "lng": 8.4761, "category": "blue", "description": "Rigi Bahnen cogwheel railway starts here."}, {"name": "Mount Rigi (Weggis cable car)", "lat": 47.0340845171802, "lng": 8.44071841761377, "category": "blue", "description": "Aerial tram from Weggis up to Rigi Kaltbad."}, {"name": "Mount Pilatus (Pilatus Kulm)", "lat": 46.979, "lng": 8.253, "category": "blue", "description": "Worldâ€™s steepest cogwheel railway or aerial tram; epic views."}, {"name": "Burgenstock (chic resort for well heeled / celebrities)", "lat": null, "lng": null, "category": "blue", "description": "Great views.  Great hike along cliff to "}, {"name": "Hammetschwand Elevator", "lat": 47.0015006246576, "lng": 8.39627617347001, "category": "blue", "description": "On the hike along clif from Burgenstock.  Great views.  Optionally walk back down to Burgenstock"}, {"name": "Stoos Ridge Hike (Klingenstock to Fronalpstock)", "lat": 46.9789, "lng": 8.6684, "category": "blue", "description": "Steep funicular to Stoos, chairlift, 2 hour ridge hike to Fronalpstock, chairlift down."}, {"name": "Start place for Stoos (steepest funicular)", "lat": null, "lng": null, "category": "", "description": ""}, {"name": "Klingenstock (start of hike)", "lat": 46.9569232276736, "lng": 8.67594085941027, "category": "", "description": "Take lift up to start hike"}, {"name": "Fronalpstock (end of hike)", "lat": 46.9696219985417, "lng": 8.63741024906172, "category": "", "description": "Take lift down"}, {"name": "Hotel Villa Honegg (20 min hike from Burgenstock)", "lat": 46.9951269135914, "lng": 8.4028306154636, "category": "blue", "description": "Beautiful views.  Have a dessert on the back terrace. Check out the outdoor pool"}, {"name": "Jungfrau Region - Lauterbrunnen", "lat": 46.593, "lng": 7.9076, "category": "blue", "description": "Waterfalls & valley views; gateway to Wengen / Murren"}, {"name": "Jungfrau Region - Murren", "lat": 46.562, "lng": 7.8921, "category": "blue", "description": "Clifftop village with big views."}, {"name": "Jungfrau Region - Grindelwald", "lat": 46.6242, "lng": 8.0414, "category": "blue", "description": "Base for Eiger views and mountain excursions."}, {"name": "Jungfrau Region - Wengen", "lat": 46.6068, "lng": 7.9217, "category": "blue", "description": "Car-free village perched above the valley."}];
+
+    const DEFAULT = { lat: 47.0850, lng: 8.4430, z: 13 };
+
+    function getParams() {
+      const out = {}, qs = new URLSearchParams(location.search);
+      for (const [k,v] of qs.entries()) out[k]=v;
+      if (location.hash && location.hash.length>1) {
+        const hs = new URLSearchParams(location.hash.slice(1));
+        for (const [k,v] of hs.entries()) if (!(k in out)) out[k]=v;
+      }
+      return out;
+    }
+    function f(x,d){ const v = parseFloat(x); return Number.isFinite(v)?v:d; }
+
+    const ICONS = {
+      "green": "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-green.png",
+      "blue":  "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-blue.png",
+      "red":   "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-red.png",
+      "orange":"https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-orange.png",
+      "violet":"https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-violet.png",
+      "gold":  "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-gold.png",
+      "grey":  "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-grey.png",
+      "black": "https://unpkg.com/leaflet-color-markers@1.0/img/marker-icon-2x-black.png"
+    };
+    const SHADOW = "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png";
+    function iconFor(color) {
+      const url = ICONS[(color||"").toLowerCase()] || ICONS["grey"];
+      return new L.Icon({
+        iconUrl: url, shadowUrl: SHADOW,
+        iconSize: [25,41], iconAnchor: [12,41],
+        popupAnchor: [1,-34], shadowSize: [41,41]
+      });
+    }
+
+    const p = getParams();
+    const center = [ f(p.lat, DEFAULT.lat), f(p.lng, DEFAULT.lng) ];
+    const zoom   = parseInt(p.z || DEFAULT.z, 10);
+    const map = L.map('map').setView(center, zoom);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const cats = new Set();
+    (window.POIS || []).forEach(d => {
+      if (!(Number.isFinite(d.lat) && Number.isFinite(d.lng))) return;
+      const color = (d.category || d.icon_color || "").toLowerCase();
+      cats.add(color || "grey");
+      L.marker([d.lat, d.lng], { icon: iconFor(color) })
+        .addTo(map)
+        .bindPopup(`<b>${d.name || "(Unnamed)"}</b><br>${d.description || ""}`);
+    });
+
+    const legend = document.getElementById("legend");
+    legend.innerHTML = "<b>Legend</b>" + Array.from(cats).sort().map(c => {
+      const url = ICONS[c] || ICONS["grey"];
+      const label = c || "other";
+      return `<div class="row"><img src="${url}" alt=""> ${label}</div>`;
+    }).join("");
+  </script>
+</body>
+</html>
